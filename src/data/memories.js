@@ -109,6 +109,8 @@ export const memoryList = [
   photo("p27", 4284, 5712, "adventures", "City of Lights", "Every light on that water, and I was looking at you.", { focus: "center 55%" }),
   photo("p28", 941, 1672, "adventures", "Udaipur Nights", "Candlelight, the palace glowing behind us, and you leaning into me.", { focus: "center 45%" }),
   photo("p29", 1200, 1600, "adventures", "Follow Me", "Lead the way. I'll follow you anywhere.", { focus: "center 50%" }),
+  photo("p42", 900, 1600, "adventures", "The View From Here", "Wrapped up in each other, with the whole city spread out below us.", { focus: "center 55%" }),
+  photo("p43", 1242, 2208, "adventures", "Just Us, Being Us", "You on a call, me on camera duty — and that smile you just can't hide.", { focus: "center 40%" }),
 
   // ── Chapter Four · All the Little Things ──
   photo("p30", 1179, 2556, "little-things", "Even Through a Screen", "Miles apart, and you still make me grin like this.", { focus: "center 40%" }),
@@ -116,13 +118,14 @@ export const memoryList = [
   photo("p32", 1024, 1536, "little-things", "Picture-Postcard Us", "Matching denim, matching hearts.", { focus: "center 35%" }),
   photo("p33", 941, 1672, "little-things", "Forehead Kisses", "Some things are easier to say without words.", { focus: "center 40%" }),
   photo("p34", 1024, 1536, "little-things", "In Every Colour", "Mirrors, colours, music — and you, outshining all of it.", { focus: "center 40%" }),
+  photo("p41", 1121, 1403, "little-things", "Little Us", "Tiny hands, already holding on.", { focus: "center 45%" }),
 
   // ── Chapter Five · Us, Forever ──
   photo("p35", 1200, 1600, "forever", "Garlands & Smiles", "Side by side, flowers around our necks and happiness all over our faces.", { focus: "center 45%" }),
   photo("p36", 960, 1280, "forever", "Sweet Moments", "Sweets in hand, and so much love in the room.", { focus: "center 45%" }),
   photo("p37", 900, 1600, "forever", "Hand in Hand", "Your hand in mine — my favourite place to be.", { focus: "center 55%" }),
   photo("p38", 768, 1364, "forever", "Holding On", "And I'm never letting go.", { focus: "center 40%" }),
-  photo("p39", 941, 1672, "forever", "This Hand", "The hand I want to hold through every sunrise, and every night like this one.", { focus: "center 65%" }),
+  photo("p39", 941, 1672, "forever", "This Hand", "The hand I want to hold through every sunrise, and every night like this one.", { focus: "center 82%" }),
   photo("p40", 1086, 1448, "forever", "My Favourite View", "You, me, and a sky on fire.", { focus: "center 55%" }),
 
   // ── Videos ──
@@ -133,6 +136,9 @@ export const memoryList = [
   video("v5", 540, 960, 4.0, true, "favourite-person", "All Dressed Up", "I could watch this on repeat."),
   video("v6", 480, 854, 8.4, true, "favourite-person", "Wind in Your Hair", "Blue skies, and your hair dancing in the wind."),
   video("v7", 960, 540, 9.1, false, "adventures", "Fresh Air", "Green fields, open skies, and you — the best view of all."),
+  video("v8", 480, 854, 4.2, true, "little-things", "Eyes Closed", "Eyes closed, still glowing."),
+  video("v9", 540, 960, 22.9, true, "favourite-person", "Twirl", "Every twirl, I fall a little harder."),
+  video("v10", 540, 960, 5.5, true, "little-things", "Hearts & All", "Hearts and all."),
 ];
 
 export const memories = Object.fromEntries(memoryList.map((m) => [m.id, m]));
@@ -159,6 +165,7 @@ export const albumPages = [
   { layout: "video", memory: "v4" },
   { layout: "duo", memories: ["p13", "p14"] },
   { layout: "polaroid", memory: "p12" },
+  { layout: "video", memory: "v9" },
   { layout: "filmstrip", memories: ["v1", "v2", "v3"], title: "Little Clips of You", note: "Tiny moments I keep coming back to." },
   { layout: "duo", memories: ["p15", "p16"] },
   { layout: "video", memory: "v5" },
@@ -170,18 +177,21 @@ export const albumPages = [
   { layout: "duo", memories: ["p22", "p23"] },
   { layout: "landscape", memory: "p24" },
   { layout: "video", memory: "v7" },
+  { layout: "polaroid", memory: "p42" },
   { layout: "duo", memories: ["p25", "p26"] },
-  { layout: "cinematic", memory: "p27" },
+  { layout: "cinematic", memory: "p43" },
   { layout: "duo", memories: ["p28", "p29"] },
 
   { layout: "chapter", chapter: "little-things", memory: "p31" },
   { layout: "polaroid", memory: "p30" },
+  { layout: "filmstrip", memories: ["v10", "v8"], title: "Caught on Camera", note: "I never get tired of these." },
   { layout: "duo", memories: ["p32", "p33"] },
+  { layout: "polaroid", memory: "p41" },
   { layout: "cinematic", memory: "p34" },
 
-  { layout: "chapter", chapter: "forever", memory: "p37" },
+  { layout: "chapter", chapter: "forever", memory: "p39" },
   { layout: "duo", memories: ["p35", "p36"] },
-  { layout: "duo", memories: ["p38", "p39"] },
+  { layout: "duo", memories: ["p38", "p37"] },
 
   { layout: "final-photo", memory: "p40" },
   { layout: "final-message" },
