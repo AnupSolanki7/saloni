@@ -1,16 +1,35 @@
-# React + Vite
+# Happy Birthday Saloni ❤️ — Our Little Love Story
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A birthday surprise: an envelope opening, a love letter, and a 34-page scrapbook
+album with real 3D page turns (swipe on phones, two-page spreads on desktop).
 
-Currently, two official plugins are available:
+Built with Vite + React + Tailwind CSS v4 + framer-motion.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run locally
 
-## React Compiler
+```bash
+npm install
+npm run dev        # http://localhost:5173  (add --host to open it on your phone over Wi-Fi)
+npm run build      # production build into dist/
+npm run preview    # serve the production build
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Where things live
 
-## Expanding the Oxlint configuration
+| What | File |
+| --- | --- |
+| Photo/video captions, chapters, page order | `src/data/memories.js` |
+| Birthday letter and final page text | `src/data/words.js` |
+| Background music + signature | `src/data/config.js` |
+| Web-ready media (what the site loads) | `public/memories/{photos,thumbnails,videos}` |
+| Untouched originals (not deployed) | `media-originals/` |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+**Edit a caption:** in `src/data/memories.js`, find the memory (e.g. `p07`) and change
+its `title` (on the Polaroid) or `caption` (the handwritten note). Add a `date` there if you
+want one shown. Change `focus` (e.g. `"center 20%"`) to adjust how a photo is cropped.
+
+**Add music:** put an mp3 at `public/music/our-song.mp3` and set
+`MUSIC_SRC = "music/our-song.mp3"` in `src/data/config.js`. It starts when she taps
+"Open Your Birthday Letter" and can be toggled from the corner button.
+
+The old wedding announcement page is kept in `src/WeddingApp.jsx` (not used).
